@@ -18,7 +18,7 @@
   when: is_windows == false
 
 - name: Fix default folder permsissions
-  shell: sudo chmod +w sites/default
+  shell: sudo chmod ug+w sites/default
   when: is_windows == false
 
 - name: Add general post-settings to settings.php
