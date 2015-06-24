@@ -3,7 +3,7 @@ env:
   pre_settings: []
   modules: []
     - { name: 'dblog', status: true }
-    - { name: 'stage_file_proxy', status: true }
+    #- { name: 'stage_file_proxy', status: true }
     - { name: 'devel', status: true }
     - { name: 'views_ui', status: true }
     - { name: 'diff', status: true }
