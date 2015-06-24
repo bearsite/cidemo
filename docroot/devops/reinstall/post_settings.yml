@@ -13,6 +13,10 @@
   shell: cp sites/default/settings.php {{ settings_file }}
   when: is_windows == true
 
+- name: Fix default folder permissions
+  shell: chown root sites/default
+  when: is_windows == false
+
 - name: Add general post-settings to settings.php
   lineinfile: dest='{{ settings_file }}' line='{{ item.name }} = \"{{ item.value }}\";'
   when: item.status == true
