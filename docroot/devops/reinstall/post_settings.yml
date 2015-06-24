@@ -13,8 +13,12 @@
   shell: cp sites/default/settings.php {{ settings_file }}
   when: is_windows == true
 
-- name: Fix default folder permissions
-  shell: chown root sites/default
+- name: Fix default folder owner
+  shell: sudo chown root sites/default
+  when: is_windows == false
+
+- name: Fix default folder permsissions
+  shell: sudo chmod +w sites/default
   when: is_windows == false
 
 - name: Add general post-settings to settings.php
