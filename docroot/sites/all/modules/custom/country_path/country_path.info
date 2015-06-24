@@ -1,0 +1,8 @@
+name = Domain Country path
+description = Provides custom aliases and routing
+core = 7.x
+package = Domain Access
+php = 5.2.4
+version = 7.x-1.0
+;dependencies[] = pathauto
+dependencies[] = domain
