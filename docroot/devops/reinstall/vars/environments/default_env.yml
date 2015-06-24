@@ -1,12 +1,7 @@
 ---
 env:
   pre_settings: []
-  modules:
-    #- { name: 'dblog', status: true }
-    #- { name: 'stage_file_proxy', status: true }
-    - { name: 'devel', status: true }
-    - { name: 'views_ui', status: true }
-    - { name: 'diff', status: true }
+  modules: []
   drush_commands:
     # Update admin username and password.
     - { name: 'sqlq', status: true, arguments: "\"UPDATE users SET name='{{ drupal_user }}' WHERE uid=1\"" }

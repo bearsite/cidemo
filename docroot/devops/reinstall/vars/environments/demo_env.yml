@@ -2,11 +2,6 @@
 env:
   pre_settings: []
   modules: []
-    #- { name: 'dblog', status: true }
-    #- { name: 'stage_file_proxy', status: true }
-    - { name: 'devel', status: true }
-    - { name: 'views_ui', status: true }
-    - { name: 'diff', status: true }
   drush_commands:
     - { name: 'search-api-clear', status: false, arguments: "-l {{ site_url }}" }
     - { name: 'search-api-index ', status: false, arguments: "-l {{ site_url }}" }
